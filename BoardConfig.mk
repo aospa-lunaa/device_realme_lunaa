@@ -22,6 +22,7 @@ TARGET_SCREEN_DENSITY := 480
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/device_framework_compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest_nfc.xml
 
 # Inherit from sm8350-common
 include device/oneplus/sm8350-common/BoardConfigCommon.mk
