@@ -25,3 +25,7 @@ service secureelement-hal_1_2 /odm/bin/hw/vendor.qti.secure_element@1.2-service
     class hal
     user system
     group system
+
+# Set SKU for secureNFC
+on early-init
+    setprop ro.boot.hardware.sku lunaa
