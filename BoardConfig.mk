@@ -30,6 +30,9 @@ include device/oneplus/sm8350-common/BoardConfigCommon.mk
 # Include proprietary files
 include vendor/realme/lunaa/BoardConfigVendor.mk
 
+# Kernel
+KERNEL_FRAGMENT_CONFIG := vendor/oplus_yupik_QGKI.config
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := RMX3360,RMX3363,RMX3361,lunaa,RE54ABL1
 
