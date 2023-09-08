@@ -1,2 +1,8 @@
+# Bluetooth
+bluetooth.device.default_name=realme GT Master Edition
+
 # Fingerprint
 persist.vendor.fp.template_updateflag=V1
+
+# USB
+vendor.usb.product_string=realme GT Master Edition
