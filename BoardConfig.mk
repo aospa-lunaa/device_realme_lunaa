@@ -22,7 +22,6 @@ TARGET_SCREEN_DENSITY := 480
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/device_framework_compatibility_matrix.xml
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest_nfc.xml
 
 # Inherit from sm8350-common
 include device/oneplus/sm8350-common/BoardConfigCommon.mk
@@ -31,6 +30,7 @@ include device/oneplus/sm8350-common/BoardConfigCommon.mk
 include vendor/realme/lunaa/BoardConfigVendor.mk
 
 # Kernel
+KERNEL_CUSTOM_LLVM := true
 KERNEL_FRAGMENT_CONFIG := vendor/oplus_yupik_QGKI.config
 
 # OTA
@@ -41,3 +41,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
 # SELinux - Include additional tree-specific rules
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# Partitions
+BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 10196353024 # BOARD_SUPER_PARTITION_SIZE - 4MB
+BOARD_SUPER_PARTITION_SIZE := 10200547328

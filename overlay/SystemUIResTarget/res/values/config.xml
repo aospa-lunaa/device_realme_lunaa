@@ -18,7 +18,7 @@
 <resources>
 
     <!-- The Enrollment Progress bar for UDFPS sensor in pixels -->
-    <integer name="config_udfpsEnrollProgressBar" translatable="false">99</integer>
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">102</integer>
 
     <!-- Location for charging text in pixels -->
     <dimen name="keyguard_indication_margin_bottom">350px</dimen>

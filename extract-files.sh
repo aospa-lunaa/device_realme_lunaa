@@ -67,6 +67,9 @@ function blob_fixup() {
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             "${SIGSCAN}" -p "23 0B 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
+        odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc)
+            sed -i "/user/ s/system/root/g" "${2}"
+            ;;
     esac
 }
 

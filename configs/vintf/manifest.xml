@@ -1,4 +1,4 @@
-<!-- Copyright (C) 2023 Paranoid Android
+<!-- Copyright (C) 2022 Paranoid Android
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,11 +14,6 @@
 -->
 <manifest version="1.0" type="device" target-level="5">
     <kernel target-level="5" />
-    <!-- Disable eSE powermanager -->
-    <hal override="true">
-        <name>vendor.qti.esepowermanager</name>
-        <transport>hwbinder</transport>
-    </hal>
     <!-- Disable NXP NFC -->
     <hal override="true">
         <name>vendor.nxp.hardware.nfc</name>
@@ -27,6 +22,11 @@
     <!-- Disable Secure Element -->
     <hal override="true">
         <name>android.hardware.secure_element</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <!-- Disable eSE powermanager -->
+    <hal override="true">
+        <name>vendor.qti.esepowermanager</name>
         <transport>hwbinder</transport>
     </hal>
 </manifest>
